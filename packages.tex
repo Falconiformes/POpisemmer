@@ -1,0 +1,37 @@
+%%% Font packages
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+%%%
+\usepackage{tikz}
+%%% Taal & bettere typografie packages
+\usepackage[dutch]{babel}
+\usepackage{microtype}
+%%% Wiskunde & fysica
+\usepackage{amsmath,amssymb,amsthm}
+\numberwithin{equation}{section}
+
+%%%%Herdefiniëring van de wortel-teken
+\usepackage{letltxmacro}
+\makeatletter
+\let\oldr@@t\r@@t
+\def\r@@t#1#2{%
+    \setbox0=\hbox{$\oldr@@t#1{#2\,}$}\dimen0=\ht0
+    \advance\dimen0-0.2\ht0
+    \setbox2=\hbox{\vrule height\ht0 depth -\dimen0}%
+{\box0\lower0.4pt\box2}}
+\LetLtxMacro{\oldsqrt}{\sqrt}
+\renewcommand*{\sqrt}[2][\ ]{\oldsqrt[#1]{#2} }
+\makeatother
+
+\usepackage{siunitx}
+\sisetup{output-decimal-marker = {,}}
+%%%
+\usepackage{graphicx}
+\usepackage{multirow,booktabs}
+%%% Verwijzingen & hyperlinks
+\usepackage{hyperref}
+\usepackage[dutch,noabbrev]{cleveref}
+%%%%
+\KOMAoptions{DIV=calc,BCOR=.75cm, abstract=true}
+
