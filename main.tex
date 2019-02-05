@@ -1,11 +1,11 @@
 \documentclass[numbers=endperiod]{scrartcl}
 \input{packages.tex}
+\setlength{\parindent}{0pt}
 %%% Front matter
 \title{Modelleren van leeglopen een blik}
 \subject{Fysica\\ Vloeistofmechanica}
 \author{Fidon Namani\thanks{BRUDDA!}}
 \date{\today}
-
 \begin{document}
 \maketitle
 \begin{abstract}
@@ -31,6 +31,14 @@ Volume is oppervlakte waardoor het vloeistof maal de hoogte van dit vloeistof. H
     Q = \frac{dV}{dt} = \frac{dhA}{dt} = A\frac{dh}{dt} = Av.
 \end{equation}
 In \cref{eq:debiet_omschreven} is $v$ de snelheid van vloeistof in \si{\meter\per\second} door oppervlakte $A$.
+
+% Eenheden van een grootheid wordt weergeven als volgt: [grootheid]
+$[v_{\text{stroom}}]$ is gelijk aan \si{\meter\per\second}. Uit \cref{eq:eenheid} volgt dat $c$ gelijk is aan:
+\begin{equation}\label{eq:eenheid}
+[c] = \frac{[v_{(\text{stroom})}]}{[h]} = \frac{\si{\meter\per\second}}{\si{\meter}} = \si{\second}^{-1}
+\end{equation}
+De constante $c$ heeft dus als eenheid $\si{\second}^{-1}$
+
 
 \newpage
 \section{Reflectie}
