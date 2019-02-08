@@ -1,0 +1,24 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\begin{document}
+\begin{tikzpicture}[line width=0.8pt]
+\draw[pattern=north west lines] (1,0) -- (0,0) -- (0,3) -- (3,3) -- (3,0) -- (2,0);
+\draw[<->=stealth] (4,0) -- (4,3);
+\draw[pattern=north west lines] (-2,3) -- (-2,-10) -- (5,-10) -- (5,-8.8) -- (-2,-8.8) ;
+\draw[<->] (0,-0.90) -- (3,-0.90);
+\draw[dotted] (0,0) -- (0,-0.90);
+\draw[dotted] (3,0) -- (3,-0.90);
+\draw[<->=stealth] (1,-0.375) -- (2,-0.375);
+\draw[dotted] (1,0) -- (1,-0.375);
+\draw[dotted] (2,0) -- (2,-0.375);
+\node at (4.2,1.5) [draw=none] (n1) {$h$};
+\node at (1.5,-0.6) [draw=none] (n2) {$A_1$};
+\node at (1.5,-1.2) [draw=none] (n3) {$A_2$};
+
+\end{tikzpicture}
+\end{document}
