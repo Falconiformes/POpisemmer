@@ -100,7 +100,7 @@ Op elke plek in het gevulde gedeelte van het vat is het debiet gelijk.
 \end{equation}
 
 Het doorsnee oppervlakte verschilt weliswaar. Zo is bij het gat $A_1 < A_2$. Uit \cref{eq:constant_debiet} volgt dan:
-\begin{equation}
+\begin{equation}\label{eq:v_h}
 \begin{split}
     A_1\vec{v}_1 = A_2\vec{v}_2\\
     \vec{v}_2 = \frac{A_1}{A_2}\vec{v}_1\\
@@ -186,16 +186,22 @@ Het verkregen antwoord van \ref{eq:A} komt exact overeen met de $\lambda$ uit de
 
 \newpage
 \section{Bonus}
-Aangenomen geldt dat $-\lambda = -\frac{A_1}{A_2} \cdot c$. Hieruit volgt dat $v(h) = \lambda \cdot h(0)$
-
-\begin{equation}
--\lambda = -\frac{A_1}{A_2} \cdot c    
-\end{equation}
-Hieruit volgt dat $v(h)$ equivalent is aan het volgende:
-\begin{equation}
-v_{(stroom)} = c \cdot h \Rightarrow v(h) = -\lambda \cdot h(0)
-\end{equation}
-
+Als \cref{eq:lambda} gedifferentieerd wordt, leidt het tot de volgende expressie:
+    \begin{equation}\label{eq:h_t_afgeleide_exp}
+        \frac{dh}{dt} = h(0)\frac{de^{-\lambda t}}{dt} = h(0)e^{-\lambda t}\cdot-\lambda \rightarrow h(t)\cdot-\lambda
+    \end{equation}
+    \Cref{eq:h_t_afgeleide_exp} is gelijk aan \cref{eq:v_h}.
+    \begin{equation}\label{eq:bonus}
+        \begin{split}
+            -\frac{A_1}{A_2}v_{\text{stroom}} &= h(t)\cdot-\lambda\\
+            -\frac{A_1}{A_2}c\cdot h(t) &= h(t)\cdot-\lambda\\
+            \frac{A_1}{A_2}c &= \lambda
+        \end{split}
+    \end{equation}
+    Uit \cref{eq:bonus} volgt:
+    \begin{equation*}
+        h(t) = h(0)e^{-\left(\frac{A_1}{A_2}c\right)t}
+    \end{equation*}
 \newpage
 \section{Reflectie}
 Ik ben tevreden met de resultaten van ons uitgevoerde onderzoek. Daarnaast
