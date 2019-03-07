@@ -1,0 +1,101 @@
+\documentclass{scrartcl}
+\input{packages.tex}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\begin{document}
+\section{Extra opdrachten}
+\begin{table}[ht]
+ \caption{Een schematische overzicht van alle data van model 1.}
+    \label{tab:1}
+    \centering
+    \begin{tabular}{c c c} 
+    \toprule
+      h(\si{\milli\meter})&t(\si{\second})\\
+    \midrule
+   \num{3.0e+2} & 0.00 \\ 
+   \num{2.3e+2} & 10.00\\
+   \num{1.8e+2} & 20.00\\ 
+   \num{1.4e+2} & 30.00\\ 
+   \num{1.1e+2} & 40.00\\ 
+    86 & 50.00\\ 
+    67 & 60.00\\ 
+    52 & 70.00\\
+    40 & 80.00\\
+    32 & 90.00\\
+    25 & 100.00\\
+    19 & 110.00\\ 
+    15 &120.00 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+Elk willekeurig punt uit \ref{tab:1} kan worden geselecteerd om vervolgens de constante, oftewel ($\lambda$) te berekenen:
+\begin{equation}\label{eq:lambda}
+h(t) =h(0) \cdot e^{-\lambda t}
+\Rightarrow \lambda = -\frac{\ln\left(\frac{h(t)}{h(0)}\right)}{t}.
+\end{equation}
+Vergelijking \ref{eq:lambda} beschrijft een functie tussen de constante ($\lambda$) en de initiale hoogte $h_i$. In de proef kan met behulp van de verkregen data en algebraïsche omgeschreven vergelijking \ref{eq:lambda} de ($\lambda$) worden berekend. De constante, oftewel ($\lambda$) wordt weergeven in \ref{eq:lambda}:
+\begin{equation}
+\begin{split}
+-\frac{\ln\left(\frac{h(t)}{h(0)}\right)}{t}=-\frac{\ln\left(\frac{0.233567}{0.30}\right)}{10.00}=-0.0250.  
+\end{split}
+\end{equation}
+Het verkregen antwoord uit \ref{eq:lambda} wordt vergeleken met \textit{Coach 7}. Voor het vergelijken van het antwoord wordt \ref{fig:first} geanalyseerd en vervolgens met de handeling functie-fit, wordt het functietype: $f(x)=a \cdot exp(bx)+c$ geselecteerd. De optie schatting wordt geselecteerd en vervolgens worden de variabelen $a$ en $c$ respectievelijk vastgezet op $a=0.30$ en $c=0$, tot slot wordt de optie verfijnd. De verkregen waarde van $b$ komt nauwkeurig overeen met de waarde van \ref{eq:lambda}, namelijk $\lambda=-0.0250$.
+
+Bij exponentiële afname is de halveringstijd de tijd waarin de hoeveelheid wordt gehalveerd. Bij groeifactor $e$ kan de halveringstijd $t$ worden berekend door de vergelijking $e^{-\lambda t}$ op te lossen.
+\begin{equation}
+e^{-\lambda t} = \frac{1}{2} \Rightarrow t =\frac{\ln(\frac{1}{2})}{-0.0250} = \SI{27.691}{\second}.
+\end{equation}
+
+
+
+De halveringstijd, oftewel $t_{\frac{1}{2}}$, wordt weergeven in \ref{eq:half}.
+\begin{equation}\label{eq:half}
+ t_{\frac{1}{2}}=\frac{\frac{\log\left(\frac{h(t)}{h(0)}\right)}{\log(\frac{1}{2})}}{t}
+\end{equation}
+Voor een exponentiële functie geldt het volgende functietype: $f(x) = a \cdot exp(bx)+c$. De richtingscoëfficiënt kan worden bepaald door twee punten uit de grafiek te selecteren. $a=\frac{\Delta y}{\Delta x}$ oftewel, $a=\frac{\Delta h}{\Delta t}$.  
+
+\begin{align}\label{eq:A}
+\begin{split}
+v(h) = -\frac{A1}{A2} \cdot c \cdot h \Rightarrow -\frac{A1}{A2} \cdot c =\frac{v(h)}{h(t)}\\
+-\frac{A1}{A2} \cdot c = \frac{-0.0075}{0.3} = -0.0250
+\end{split}
+\end{align}
+Het verkregen antwoord van \ref{eq:A} komt exact overeen met de $\lambda$ uit de functie $h(t) = h(0)\cdot e^{\lambda t}$.
+\newpage
+Bij het differentïeren van de functie wordt eerst de ketttingregel toegepast, daarna wordt gesubstitueerd en vervolgens wordt de functie vereenvoudigd. 
+\begin{equation}
+    h'(t) = \frac{dh}{dt}\left(h(0)\cdot e^{-\left(\frac{A_1}{A_2}\right) \cdot c}\right)=-\frac{e \cdot \frac{A_1 \cdot c}{A_2} \cdot h(0) \cdot c }{A_2}
+\end{equation}
+
+%\section{Grafieken}
+%\begin{figure}[ht]
+    %\centering
+    %\begin{subfigure}{0.3\textwidth}
+    %\includegraphics[width=\linewidth]{Data.pdf}
+    % \caption{De grafiek met $h$ als functie van $t$}
+    % \label{fig:first}
+    %\%end{subfigure}
+    %\begin{subfigure}{0.3\textwidth}
+    %\centering
+   % \includegraphics[width=\linewidth]{Datas.pdf}
+    %\caption{De grafiek met $v(h)$ als functie van $t$.}
+  %  \end{subfigure}
+ %   \label{fig:second}
+%\end{figure}
+%De volgenden grafieken zijn gebaseerd op de gegevens uit tabel %\ref{tab:1}.
+%\begin{figure}[ht]
+ %   \centering
+ %%   \includegraphics[scale=0.7]{Data.pdf}
+  %  \caption{De grafiek met $h$ als functie van $t$.}
+  %  \label{fig:first}
+%\end{figure}
+
+%\begin{figure}[ht]
+ %   \centering
+  %  \includegraphics[scale=0.7]{Datas.pdf}
+   % \caption{De grafiek met $v(h)$ als functie van $t$}
+    %\label{fig:second}
+%\end{figure}
+%\Rightarrow \frac{h(t)}{h(0)}=e^{-\lambda t}\\ \Rightarrow ln\left(\frac{h(t)}{h(0)}\right)=ln(e^{-\lambda t}) 
+\end{document}
