@@ -10,7 +10,7 @@
 \begin{abstract}
     \textit{Doel}: Het doel van dit experiment was om een experiment uit te voeren en de resultaten van het model te vergelijken met de resultaten van het eerste model. Hieruit kan worden geconcludeerd of de uitgangspunten van het model realistisch waren.
     
-    Bij dit proefje wordt experimenteel onderzocht hoe het waterpeil in een cilinder verandert in de loop van de tijd. Van de wijzigingen van het waterpeil worden diagrammen gemaakt.  
+    Bij dit proefje wordt experimenteel onderzocht hoe het waterpeil in een cilinder verandert in de loop van de tijd. Van de wijzigingen van het vloeistofniveau werden diagrammen gemaakt.  
 
     \textit{Methode}:
 
@@ -26,31 +26,49 @@ Vaak wordt op het nieuws uitgezonden over olielekkage van grote vrachtschepen. D
 \begin{description}
 \item[Hoofdvraag:] Wat is het verband tussen volumeafname en tijd bij het leeglopen van emmer?
 
-\item[Deelvraag 1:] Wat voor verband bestaat er tussen de hoogte van het water en de tijd?
+\item[Deelvraag 1:] Wat is de basale theorie bij vloeistofdynamica?
 
-\item[Deelvraag 2:] Hoe hangt de stroomsnelheid af van het vloeistofpeil in het object?
+\item[Deelvraag 2:] Wat voor verband bestaat er tussen het vloeistofniveau en tijd bij het leeglopen van emmer?
 
-\item[Deelvraag 3:] Wat voor verband bestaat er tussen de hoogte van het water en de instroom?
+\item[Deelvraag 3:] Hoe wordt het uitstroomdebiet bepaald op basis van instroomdebiet?
 
-\item[Deelvraag 4:] Wat is het verband tussen de constante instroom en uitstroom?
+\item[Deelvraag 4:] Wat is het verband tussen de uitstroomsnelheid en tijd bij het leeglopen van emmer?
 \end{description}
 
 \newpage
 \section{Theorie}
-De uistroomsnelheid hangt af van de hoogte en de tijdsconstante. De wet van Torricelli kan hier worden toegepast en daarbij geldt de wet van behoud van energie. Hoogte-energie wordt namelijk omgezet in snelheid. De volgende vergelijking kan hierbij worden opgesteld:
-\begin{align}
-    \begin{split}
-        m \cdot g \cdot h_i = \frac{1}{2} \cdot m \cdot v^2 \Rightarrow
-        \vec{v} = \sqrt{2 \cdot g \cdot h_i}
-    \end{split}
-\end{align}
-Hierbij hangt $v$ niet liniear samen af met de hoogte
 
+De $E_{pot}$ die het water heeft door de gravitatie, zorgt ervoor dat het water gaat stromen naar een lager niveau. Hierdoor wordt $E_{pot}$ omgezet in $E_{k}$. Hierbij geldt de volgende vergelijking:
+\begin{equation}\label{eq:som}
+m \cdot g \cdot h = \frac{1}{2} \cdot m \cdot \vec{v^2}
+\end{equation}
+\Cref{eq:som} is afgeleid uit de wet van Bernoulli. Deze vergelijking kan nog verder worden afgeleid, hierbij geldt dus:
+\begin{equation}\label{torricelli}
+\vec{v} = \sqrt{2 \cdot g \cdot h}
+\end{equation}
+Dit is de wet van Torricelli, oftewel de uistroomsnelheid is dan evenredig met de vierkantswortel van de hoogte.
+
+\vspace{5mm}
+De hoeveelheid volume van een vloeistof dat per tijdseenheid door een zekere oppervlakte passeert, wordt het debiet genoemd. Mathematisch omschreven als volgt:
+\begin{equation}\label{eq:debiet}
+    Q = \frac{dV}{dt}.
+\end{equation}
+Volume is oppervlakte waardoor het vloeistof maal de hoogte van dit vloeistof. Hieruit volgt dat $Q$ equivalent is aan het volgende:
+\begin{equation}\label{eq:debiet_omschreven}
+    Q = \frac{dV}{dt} = \frac{dhA}{dt} = A\frac{dh}{dt} = Av.
+\end{equation}
+In \cref{eq:debiet_omschreven} is $v$ de snelheid van vloeistof in \si{\meter\per\second} door oppervlakte $A$.
+
+Op elke plek in het gevulde gedeelte van het vat is het debiet gelijk. 
+\begin{equation}\label{eq:constant_debiet}
+    Av = \text{constant}
+\end{equation}
 Op basis van de bovengenoemde theorie waren de volgende hypotheses opgesteld:
 \begin{itemize}
  \renewcommand{\labelitemi}{\scriptsize$\blacksquare$}
-    \item Een wortelverband bestaat tussen $y$ en $t$.
-    \item Een liniear verband bestaat tussen $v(h)$ en $t$.
+    \item Een wortelverband bestaat tussen $v$ en $h$.
+    \item Een lineair verband bestaat tussen $v(h)$ en $t$.
+    \item Een lineair verband bestaat tussen de $v(h)_{in}$ en de hoogte. 
 \end{itemize}
 
 \newpage
@@ -59,7 +77,7 @@ Bij het experiment is gebruik gemaakt van een rolmaat en een object die cilinder
 \begin{equation}\label{eq:cilinder}
     I_{cilinder} = \pi \cdot r^2 \cdot h
 \end{equation}
-Voor het uitstromen van de cilinder is er perforatie toegepast. Eén individu  reguleerde het openen en sluiten van de opening. Een ander individu ging met een stopwatch op een gelijke tijdsinterval van \SI{10}{\second} bijhouden en meet de hoogte van het water met een rolmaat met een $\pm$ \SI{1}{\milli\meter} precisie. De resultaten zijn ingevoerd in \textit{Coach 7}. Met behulp van de modelleringscapaciteiten van \textit{Coach 7} was een $h$ als van functie van $t$ grafiek gemaakt.  
+Voor het uitstromen van de cilinder is er perforatie toegepast. Eén individu reguleerde het openen en sluiten van de opening. Een ander individu ging met een stopwatch op een gelijk tijdsinterval van \SI{10}{\second} bijhouden en meet de hoogte van het water met een rolmaat met een $\pm$ \SI{1}{\milli\meter} precisie. De resultaten zijn ingevoerd in \textit{Coach 7}. Met behulp van de modelleringscapaciteiten van \textit{Coach 7} was een $h$ als van functie van $t$ grafiek gemaakt.  
 
 
 
@@ -78,12 +96,47 @@ Voor het uitstromen van de cilinder is er perforatie toegepast. Eén individu  r
 %Eén individu hield de smalle blik vast en was in bediening van het openen en sluiten van opening. Het andere individu ging met een smartphone de tijd meten. Op gelijke tijdsintervallen van \SI{10}{\second} werd de opening gauw gesloten en vervolgens werd met een rolmaat de momentele hoogte gemeten. De resulterende gegevens werden ingevoerd in \textit{Coach 7} opgenomen. Met behulp van %modelleren van \textit{Coach 7} waren de overige grootheden bepaald op $x$
 \begin{figure}[ht]
 \centering
-\caption{Een schematische weergave van de opstelling.}
+\caption{Een schematische weergave van metingsprincipe. Op een beginhoogte $y_f$ = \SI{0.30}{\meter} werd op gelijke tijdsintervallen de $y_i$ bepaald.}
 \includegraphics[scale=0.8]{Beker.pdf}    
 \end{figure}
 
+%\newpage
+%\section{Formules}
+%De hoeveelheid volume van een vloeistof dat per tijdseenheid door een zekere oppervlakte passeert, wordt het debiet genoemd. Mathematisch omschreven als volgt:
+%\begin{equation}\label{eq:debiet}
+ %   Q = \frac{dV}{dt}.
+%\end{equation}
+%Volume is oppervlakte waardoor het vloeistof maal de hoogte van dit vloeistof. Hieruit volgt dat $Q$ equivalent is aan het volgende:
+%\begin{equation}\label{eq:debiet_omschreven}
+  %  Q = \frac{dV}{dt} = \frac{dhA}{dt} = A\frac{dh}{dt} = Av.
+%\end{equation}
+%In \cref{eq:debiet_omschreven} is $v$ de snelheid van vloeistof in \si{\meter\per\second} door oppervlakte $A$.
+
+%Op elke plek in het gevulde gedeelte van het vat is het debiet gelijk. 
+%\begin{equation}\label{eq:constant_debiet}
+%    Av = \text{constant}
+%\end{equation}
+
+%Het doorsnee oppervlakte verschilt weliswaar. Zo is bij het gat $A_1 < A_2$. Uit %\cref{eq:constant_debiet} volgt dan:
+%\begin{equation}\label{eq:v_h}
+%\begin{split}
+ %   A_1\vec{v}_1 = A_2\vec{v}_2\\
+  %  \vec{v}_2 = \frac{A_1}{A_2}\vec{v}_1\\
+   %  \rightarrow v_2 = -\frac{A_1}{A_2}v_1\\
+%    \end{split}
+ %   \end{equation}
+% Eenheden van een grootheid wordt weergeven als volgt: [grootheid]
+%$[v_{\text{stroom}}]$ is gelijk aan \si{\meter\per\second}. Uit \cref{eq:eenheid} volgt dat %$c$ gelijk is aan:
+%\begin{equation}\label{eq:eenheid}
+%[c] = \frac{[v_{(\text{stroom})}]}{[h]} = \frac{\si{\meter\per\second}}{\si{\meter}} = %\si{\second}^{-1}
+%\end{equation}
+%De constante $c$ heeft dus als eenheid $\si{\second}^{-1}$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%                         
+
+\appendix
 \newpage
-\section{Formules}
+\section{Extra opdrachten}
 De hoeveelheid volume van een vloeistof dat per tijdseenheid door een zekere oppervlakte passeert, wordt het debiet genoemd. Mathematisch omschreven als volgt:
 \begin{equation}\label{eq:debiet}
     Q = \frac{dV}{dt}.
@@ -114,18 +167,6 @@ $[v_{\text{stroom}}]$ is gelijk aan \si{\meter\per\second}. Uit \cref{eq:eenheid
 \end{equation}
 De constante $c$ heeft dus als eenheid $\si{\second}^{-1}$
 
-
-%\section{Methode}
-
-%\begin{figure}
-%    \centering
-%    \includegraphics[scale=0.4\textwidth]{main tex(1)}
-%    \caption{Een schematische weergave van de opstelling.}
-%    \label{fig:nigger}
-%\end{figure}
-
-\newpage
-\section{Extra opdrachten}
 \begin{table}[ht]
  \caption{Een schematische overzicht van alle data van model 1.}
     \label{tab:1}
@@ -155,34 +196,26 @@ Elk willekeurig punt uit \ref{tab:1} kan worden geselecteerd om vervolgens de co
 h(t) =h(0) \cdot e^{-\lambda t}
 \Rightarrow \lambda = -\frac{\ln\left(\frac{h(t)}{h(0)}\right)}{t}.
 \end{equation}
-Vergelijking \ref{eq:lambda} beschrijft een functie tussen de constante ($\lambda$) en de initiale hoogte $h_i$. In de proef kan met behulp van de verkregen data en algebraïsche omgeschreven vergelijking \ref{eq:lambda} de ($\lambda$) worden berekend. De constante, oftewel ($\lambda$) wordt weergeven in \ref{eq:lambda}:
+Vergelijking \cref{eq:lambda} beschrijft een functie tussen de constante ($\lambda$) en de initiale hoogte $h_i$. In de proef kan met behulp van de verkregen data en algebraïsche omgeschreven vergelijking \cref{eq:lambda} de ($\lambda$) worden berekend. De constante, oftewel ($\lambda$) wordt weergeven in \cref{eq:lambda}:
 \begin{equation}
 \begin{split}
 -\frac{\ln\left(\frac{h(t)}{h(0)}\right)}{t}=-\frac{\ln\left(\frac{0.233567}{0.30}\right)}{10.00}=-0.0250.  
 \end{split}
 \end{equation}
-Het verkregen antwoord uit \ref{eq:lambda} wordt vergeleken met \textit{Coach 7}. Voor het vergelijken van het antwoord wordt ... geanalyseerd en vervolgens met de handeling functie-fit, wordt het functietype: $f(x)=a \cdot exp(bx)+c$ geselecteerd. De optie schatting wordt geselecteerd en vervolgens worden de variabelen $a$ en $c$ respectievelijk vastgezet op $a=0.30$ en $c=0$, tot slot wordt de optie verfijnd. De verkregen waarde van $b$ komt nauwkeurig overeen met de waarde van \ref{eq:lambda}, namelijk $\lambda=-0.0250$.
+Het verkregen antwoord uit \cref{eq:lambda} wordt vergeleken met \textit{Coach 7}. Voor het vergelijken van het antwoord wordt ... geanalyseerd en vervolgens met de handeling functie-fit, wordt het functietype: $f(x)=a \cdot exp(bx)+c$ geselecteerd. De optie schatting wordt geselecteerd en vervolgens worden de variabelen $a$ en $c$ respectievelijk vastgezet op $a=0.30$ en $c=0$, tot slot wordt de optie verfijnd. De verkregen waarde van $b$ komt nauwkeurig overeen met de waarde van \cref{eq:lambda}, namelijk $\lambda=-0.0250$.
 
-Bij exponentiële afname is de halveringstijd de tijd waarin de hoeveelheid wordt gehalveerd. Bij groeifactor $e$ kan de halveringstijd $t$ worden berekend door de vergelijking $e^{-\lambda t}$ op te lossen.
-\begin{equation}
-e^{-\lambda t} = \frac{1}{2} \Rightarrow t =\frac{\ln(\frac{1}{2})}{-0.0250} = \SI{27.691}{\second}.
-\end{equation}
-
-
-
-De halveringstijd, oftewel $t_{\frac{1}{2}}$, wordt weergeven in \ref{eq:half}.
+Bij exponentiële afname is de halveringstijd de tijd waarin de hoogte wordt gehalveerd. Bij groeifactor $e$ kan de halveringstijd $t$ worden berekend door de vergelijking $e^{-\lambda t}$ op te lossen. De halveringstijd wordt weergeven in \cref{eq:half}.
 \begin{equation}\label{eq:half}
- t_{\frac{1}{2}}=\frac{\frac{\log\left(\frac{h(t)}{h(0)}\right)}{\log(\frac{1}{2})}}{t}
+t_{\frac{1}{2}} = \frac{t \cdot \log(\frac{1}{2})}{\left(\log \left(\frac{h(t)}{h(0)}\right)\right)} = \frac{10.00 \cdot \log(\frac{1}{2})}{\left(\log \left(\frac{0.233567}{0.30}\right)\right)} = \SI{27.69}{\second}
 \end{equation}
-Voor een exponentiële functie geldt het volgende functietype: $f(x) = a \cdot exp(bx)+c$. De richtingscoëfficiënt kan worden bepaald door twee punten uit de grafiek te selecteren. $a=\frac{\Delta y}{\Delta x}$ oftewel, $a=\frac{\Delta h}{\Delta t}$.  
-
+%Voor een exponentiële functie geldt het volgende functietype: $f(x) = a \cdot exp(bx)+c$. De richtingscoëfficiënt kan worden bepaald door twee punten uit de grafiek te selecteren. $a=\frac{\Delta y}{\Delta x}$ oftewel, $a=\frac{\Delta h}{\Delta t}$.  
 \begin{align}\label{eq:A}
 \begin{split}
 v(h) = -\frac{A1}{A2} \cdot c \cdot h \Rightarrow -\frac{A1}{A2} \cdot c =\frac{v(h)}{h(t)}\\
 -\frac{A1}{A2} \cdot c = \frac{-0.0075}{0.3} = -0.0250
 \end{split}
 \end{align}
-Het verkregen antwoord van \ref{eq:A} komt exact overeen met de $\lambda$ uit de functie $h(t) = h(0)\cdot e^{\lambda t}$.
+Het verkregen antwoord van \cref{eq:A} komt exact overeen met de $\lambda$ uit de functie $h(t) = h(0)\cdot e^{\lambda t}$.
 
 \newpage
 \section{Bonus}
@@ -202,7 +235,20 @@ Als \cref{eq:lambda} gedifferentieerd wordt, leidt het tot de volgende expressie
     \begin{equation*}
         h(t) = h(0)e^{-\left(\frac{A_1}{A_2}c\right)t}
     \end{equation*}
+    
+    
+    
+    
 \newpage
+\section{Discussie}
+De gestelde hypotheses waren positief. Een wortelverband bestaat tussen $y_f$ en $t$. Verder leverde de grafiek met $v$ uitgezet tegen $t$ een omgekeerde wortelverband. Dit is te verklaren met de wet van Torricelli, namelijk hoogte-energie wordt omgezet in snelheid. De verklaring is weergeven in \cref{eq:wet}.
+\begin{equation}\label{eq:wet}
+\begin{split}
+m \cdot g \cdot y_f = \frac{1}{2} \cdot m \cdot \vec{v^2}\\
+\vec{v} = \sqrt{2 \cdot g \cdot y_f}
+\end{split}
+\end{equation}
+
 \section{Reflectie}
 Ik ben tevreden met de resultaten van ons uitgevoerde onderzoek. Daarnaast
 ben ik trots op ons verslag. De gegevens zijn op een professionele
@@ -226,7 +272,7 @@ heb kunnen beantwoorden.
 6 & Oriënteren & 1\\
 7 & Oriënteren & 1\\
 8 & Oriënteren & 1\\
-9 & modellering & 2\\
+9 & Modellering & 2\\
 10 & Dataverwerking & 3\\
 11 & Dataverwerking & 3\\
 12 & Afronding & 2\\
