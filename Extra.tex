@@ -11,7 +11,7 @@ Bij deze opdrachten is er gebruik gemaakt van model 1 met de oude startwaarden e
 \end{equation}
 De hoogte neemt in een vaste tijd met een vaste factor af. Bij een gelijk tijdsinterval van \SI{10}{\second}. Met behulp van de modelleringscapaciteiten van \textit{Coach 7} is $h$ op een gelijk tijdsinterval bepaald tot een tijdstip van \SI{120}{\second}. De resultaten van het model zijn weergeven in \cref{tab:1}. 
 \begin{table}[ht]
- \caption{Een schematische overzicht van alle data van model 1.}
+ \captionabove{Een schematische overzicht van alle data van model 1.}
     \label{tab:1}
     \centering
     \begin{tabular}{*{2}{S[table-format = 3.2]}} 
@@ -40,18 +40,22 @@ De hoogte neemt in een vaste tijd met een vaste factor af. Bij een gelijk tijdsi
  \end{equation}
 De constante $\lambda$ wordt weergeven in \cref{eq:lambda}
 \begin{equation}\label{eq:lambda}
--\frac{\ln\left(\frac{h(t)}{h(0)}\right)}{t}=-\frac{\ln\left(\frac{0.233567}{0.30}\right)}{10.00}=-0.0250.  
+-\frac{\ln\left(\frac{h(t)}{h(0)}\right)}{t}=-\frac{\ln\left(\frac{0.233567}{0.30}\right)}{10.00} = \num{-2.5e-2}.  
 \end{equation}
 Bij een exponentiële afname is de halveringstijd de tijd waarin de hoogte wordt gehalveerd. Mathematische omgeschreven geldt het volgende:
 \begin{equation}\label{eq:half}
 t_{\frac{1}{2}} = \frac{t \cdot \log(\frac{1}{2})}{\left(\log \left(\frac{h(t)}{h(0)}\right)\right)} = \frac{10.00 \cdot \log(\frac{1}{2})}{\left(\log \left(\frac{0.233567}{0.30}\right)\right)} = \SI{27.69}{\second}
 \end{equation}
-Met behulp van \textit{Coach 7} is het ook mogelijk om de constante $\lambda$ te berekenen. Dit kan aan de hand worden gedaan met een trendlijn. Bij een exponentiële functie geldt een algemen formule:
+Met behulp van \textit{Coach 7} is het ook mogelijk om de constante $\lambda$ te berekenen. Dit kan aan de hand worden gedaan met een trendlijn. Bij een exponentiële functie geldt een algemene formule:
 \begin{equation}
     f(x) = a \cdot exp(bx) + c
 \end{equation}
-Uit \textit{Coach 7} is gebleken dat de waarde van $b \approx-0.0250$. Het antwoord lijkt exact te overeenkomen met het berekende $\lambda$ van \cref{eq:lambda}. 
-
+Uit \textit{Coach 7} is gebleken dat de waarde van $b \approx-0.0250$. Het antwoord lijkt exact te overeenkomen met het berekende $\lambda$ van \cref{eq:lambda}. Deze waarden worden ook vergeleken met $\frac{A_1}{A_2}\cdot c$. $\frac{A_1}{A_2}\cdot c$ wordt weergeven in 
+\cref{eq:A1/A2}
+\begin{equation}\label{eq:A1/A2}
+    v(h) = -\frac{A_1}{A_2}c \cdot h = -\frac{A_1}{A_2} \cdot c = \frac{v(h)}{h(t)} \Rightarrow -\frac{A_1}{A_2} \cdot c = \frac{-0.0075}{0.3} = \num{-2.5e-2}
+\end{equation}
+Hieruit is te cocnluderen dat de waarden van $-\frac{A_1}{A_2}$, $\lambda$ en $b$ equivalent met elkaar zijn, namelijk \num{-2.5e-2}.
 
 
 
@@ -122,7 +126,7 @@ Het verkregen antwoord van \cref{eq:A} komt exact overeen met de $\lambda$ uit d
 \section{Bonus}
 Als \cref{eq:lambda} gedifferentieerd wordt, leidt het tot de volgende expressie:
     \begin{equation}\label{eq:h_t_afgeleide_exp}
-        \frac{dh}{dt} = h(0)\frac{de^{-\lambda t}}{dt} = h(0)e^{-\lambda t}\cdot-\lambda \rightarrow h(t)\cdot-\lambda
+        \frac{dh}{dt} = h(0)\frac{de^{-\lambda t}}{dt} = h(0)e^{-\lambda t}\cdot-\lambda = h(t)\cdot-\lambda
     \end{equation}
     \Cref{eq:h_t_afgeleide_exp} is gelijk aan \cref{eq:v_h}.
     \begin{equation}\label{eq:bonus}
