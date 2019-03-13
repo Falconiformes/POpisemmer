@@ -47,7 +47,7 @@ De $E_{pot}$ die het water heeft door de gravitatie, zorgt ervoor dat het water 
 \begin{equation}\label{eq:som}
 mgh = \frac{1}{2} mv^2
 \end{equation}
-\Cref{eq:som} is afgeleid uit de wet van Bernoulli. Deze vergelijking kan nog verder worden afgeleid, hierbij geldt dus:
+\cref{eq:som} is afgeleid uit de wet van Bernoulli. Deze vergelijking kan nog verder worden afgeleid, hierbij geldt dus:
 \begin{equation}\label{torricelli}
 v = \sqrt{2gh}
 \end{equation}
@@ -67,7 +67,7 @@ Op elke plek in het gevulde gedeelte van het vat is het debiet gelijk:
 \begin{equation}\label{eq:constant_debiet}
     Av = \text{constant}.
 \end{equation}
-Dit wordt continuiteitsvergelijking van debiet genoemd.
+Dit wordt de continuiteitsvergelijking van debiet genoemd.
 
 Op basis van de bovengenoemde theorie waren de volgende hypotheses opgesteld:
 \begin{itemize}
@@ -83,9 +83,6 @@ Bij het experiment is gebruik gemaakt van een rolmaat en een object die cilinder
     I_{\text{cilinder}} = \pi r^2h
 \end{equation}
 Voor het uitstromen van de cilinder is er perforatie toegepast. Eén individu reguleerde het openen en sluiten van de opening. Een ander individu ging met een stopwatch op een gelijk tijdsinterval van \SI{10}{\second} bijhouden en meet de hoogte van het water met een rolmaat met een $\pm$ \SI{1}{\milli\meter} precisie. De resultaten zijn ingevoerd in \textit{Coach 7}. Met behulp van de modelleringscapaciteiten van \textit{Coach 7} was een $h$ als van functie van $t$ grafiek gemaakt.  
-
-
-%Bij het experiment is gebruik gemaakt van een rolmaat en een blik. De stralen van de cirkels werden gemeten met een rolmaat met een \SI{1}{\centi\meter}. Voor de de uitkomst van de oppervlakte het blikje geld de volgende vergelijking:
 \begin{equation}
     A_1 = \pi \cdot 0.102^2 = \SI{3.3e-2}{\meter\squared}
 \end{equation}
@@ -94,7 +91,7 @@ Voor het uitstromen van de cilinder is er perforatie toegepast. Eén individu re
     A_2 = \pi \cdot 0.016^2 = \SI{8.0e-4}{\meter\squared}
 \end{equation}
 
-%Eén individu hield de smalle blik vast en was in bediening van het openen en sluiten van opening. Het andere individu ging met een smartphone de tijd meten. Op gelijke tijdsintervallen van \SI{10}{\second} werd de opening gauw gesloten en vervolgens werd met een rolmaat de momentele hoogte gemeten. De resulterende gegevens werden ingevoerd in \textit{Coach 7} opgenomen. Met behulp van %modelleren van \textit{Coach 7} waren de overige grootheden bepaald op $x$
+
 \begin{figure}[ht]
 \centering
 \includegraphics[scale=0.8]{beker.pdf}    
@@ -103,16 +100,121 @@ Voor het uitstromen van de cilinder is er perforatie toegepast. Eén individu re
 \end{figure}
 
 \section{Modellen}
+%De resultaten van model en het experiment zijn weergeven in \cref{fig:ht}. 
+%\begin{figure}[ht]
+%    \centering
+%    \includegraphics{Ht-grafiek.pdf}
+ %   \caption{De grafiek met $y_f$ tegen $t$ van het experiment en de theorie.}
+ %   \label{fig:ht}
+%\end{figure}
 \subsection{Model 1}
+Het eerste model heeft als $y_f=\SI{0.30}{\meter}$ Voor de oppervlaktes van het object gelden $A_1=\SI{1.0e-4}{\meter\squared}$ en $A_2=\SI{40e-4}{\meter\squared}$. Hierbij is er ook een contante opgenomen, de eenheid van constante $c$ wordt weergeven in \ref{eq:eenheid}
+\begin{equation}\label{eq:eenheid}
+[c] = \frac{[v_{(\text{stroom})}]}{[h]} = \frac{\si{\meter\per\second}}{\si{\meter}} = \si{\second}^{-1}
+\end{equation}
+De constante $c$ heeft dus als eenheid $\si{\second}^{-1}$ en de waarde is $1.0$.
+Bij het vormen van het eerste model wordt er een stopconditie genomen van $h<\SI{0.0001}{\meter}$ De hulpvariabelen worden gedefinieerd en de waarden worden voor de constanten ingevoerd. Uit de verkregen meting wordt een grafiek gemaakt van $h$ als functie van $t$ en een grafiek van $v(h)$ als functie van $t$. Het complete model wordt weergeven in ... 
+%\begin{figure}
+%    \centering
+ %   \includegraphics{}
+  %  \caption{Caption}
+  %  \label{fig:my_label}
+%\end{figure}
+
+\newpage
 \subsection{Model 2}
+Er wordt verondersteld dat er sprake is van een wortelverband, hierbij geldt de volgende vergelijking met 0 < $p$ < 1:
+\begin{equation}
+    v_{(stroom)} = c \cdot h^p
+\end{equation}
+De gegevens van model 1 zijn overgenomen in model 2, uitgezonderd de waarden van de oppervlakten. Model 2 heeft een startwaarde $p$ opgenomen, voor de waarde van p geldt $p=\frac{1}{2}$. Het model wordt vergeleken met het model van het experiment, hierbij wordt rekening mee gehouden dat $c$ wordt gewijzigd om het zo exact mogelijk te laten  lijken op het experiment. De hoogte lijkt hierdoor op een grotere $y_f$ uit te stromen, waardoor een wortelverband zichtbaar lijkt te worden. Het tweede model wordt weergeven in ...
+%\begin{figure}
+%    \centering
+  %  \includegraphics{}
+ %   \caption{Caption}
+   % \label{fig:my_label}
+%\end{figure}
+
+
 \subsection{Model 3}
+
+\section{Opdrachten}
+Bij deze opdrachten is er gebruik gemaakt van model 1 met de oude startwaarden en constante. In deze opdrachten werd aangenomen dat er sprake is van een exponentiële afname. Hierbij geldt dan volgende vergelijking:
+\begin{equation}
+    h(t) = h(0) \cdot e^{-\lambda t}
+\end{equation}
+De hoogte neemt in een vaste tijd met een vaste factor af. Bij een gelijk tijdsinterval van \SI{10}{\second}. Met behulp van de modelleringscapaciteiten van \textit{Coach 7} is $h$ op een gelijk tijdsinterval bepaald tot een tijdstip van \SI{120}{\second}. De resultaten van het model zijn weergeven in \cref{tab:1}. 
+\begin{table}[ht]
+ \captionabove{Een schematische overzicht van alle data van model 1.}
+    \label{tab:1}
+    \centering
+    \begin{tabular}{*{2}{S[table-format = 3.2]}} 
+    \toprule
+      {h(\si{\milli\meter})} & {t(\si{\second})}\\
+    \midrule
+   300 & 0,00 \\ 
+   23 & 10,00\\
+   18 & 20,00\\ 
+   14 & 30,00\\ 
+   11 & 40,00\\ 
+    86 & 50,00\\ 
+    67 & 60,00\\ 
+    52 & 70,00\\
+    40 & 80,00\\
+    32 & 90,00\\
+    25 & 100,00\\
+    19 & 110,00\\ 
+    15 &120,00 \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+ De constante $\lambda$ kan worden bepaald aan de hand van \cref{tab:1}, hieruit kan één willekeurig tijdstip worden geselecteerd om de constante $\lambda$ te berekenen. 
+ \begin{equation}
+    h(t) =h(0) \cdot e^{-\lambda t} 
+ \end{equation}
+De constante $\lambda$ wordt weergeven in \cref{eq:lambda}
+\begin{equation}\label{eq:lambda}
+-\frac{\ln\left(\frac{h(t)}{h(0)}\right)}{t}=-\frac{\ln\left(\frac{0.233567}{0.30}\right)}{10.00} = \num{-2.5e-2}.  
+\end{equation}
+Bij een exponentiële afname is de halveringstijd de tijd waarin de hoogte wordt gehalveerd. Mathematische omgeschreven geldt het volgende:
+\begin{equation}\label{eq:half}
+t_{\frac{1}{2}} = \frac{t \cdot \log(\frac{1}{2})}{\left(\log \left(\frac{h(t)}{h(0)}\right)\right)} = \frac{10.00 \cdot \log(\frac{1}{2})}{\left(\log \left(\frac{0.233567...}{0.30}\right)\right)} = \SI{27.69}{\second}
+\end{equation}
+Met behulp van \textit{Coach 7} is het ook mogelijk om de constante $\lambda$ te berekenen. Dit kan aan de hand worden gedaan met een trendlijn. Bij een exponentiële functie geldt een algemene formule:
+\begin{equation}
+    f(x) = a \cdot exp(bx) + c
+\end{equation}
+Uit \textit{Coach 7} is gebleken dat de waarde van $b \approx-0.0250$. Het antwoord lijkt exact te overeenkomen met het berekende $\lambda$ van \cref{eq:lambda}. Deze waarden worden ook vergeleken met $\frac{A_1}{A_2}\cdot c$, deze variabelen worden weergeven in \cref{eq:A1/A2}
+\begin{equation}\label{eq:A1/A2}
+ -\frac{A_1}{A_2}c = \frac{v(h)}{h(t)} \Rightarrow -\frac{A_1}{A_2}c = \frac{-0.0075}{0.3} = \num{-2.5e-2}
+\end{equation}
+Hieruit is te concluderen dat de waarden van $-\frac{A_1}{A_2}c$, $\lambda$ en $b$ equivalent met elkaar zijn, namelijk \num{-2.5e-2}. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Discussie}
 De gestelde hypotheses waren positief. Een wortelverband bestaat tussen $y_f$ en $t$. Verder leverde de grafiek met $v$ uitgezet tegen $t$ een omgekeerde wortelverband. Dit is te verklaren met de wet van Torricelli, namelijk hoogte-energie wordt omgezet in snelheid. De verklaring is weergeven in \cref{eq:wet}.
 \begin{equation}\label{eq:wet}
 \begin{split}
-m \cdot g \cdot y_f = \frac{1}{2} \cdot m \cdot \vec{v^2}\\
-\vec{v} = \sqrt{2 \cdot g \cdot y_f}
+m \cdot g \cdot y_f = \frac{1}{2} \cdot m \cdot v^2\\
+v = \sqrt{2 \cdot g \cdot y_f}
 \end{split}
 \end{equation}
 
@@ -126,7 +228,7 @@ een praktische opdracht toe te passen, waardoor ik de onderzoeksvragen
 heb kunnen beantwoorden.
 
 
-\newpage
+\newpage        
 \appendix
 \section{Logboek}
 \begin{table}[ht]
@@ -137,8 +239,8 @@ heb kunnen beantwoorden.
 {Week van uitvoering} & Activiteit & Tijdspendering in (\si{\hour})\\
 \midrule
 6 & Oriënteren & 1\\
-7 & Oriënteren & 1\\
-8 & Oriënteren & 1\\
+7 & Calculeren & 1\\
+8 & Calculeren & 1\\
 9 & Modellering & 2\\
 10 & Dataverwerking & 3\\
 11 & Dataverwerking & 3\\
